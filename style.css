@@ -1,0 +1,438 @@
+form > p {
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+form > h1 {
+    margin: 0 0 20px 0;
+}
+
+.container, .add-block {
+    margin: 50px auto;
+    width: 60%;
+    font-family: sans-serif;
+    /* position: relative; */
+}
+
+.add-block {
+    padding: 25px 25px 25px 25px;
+    height: 230px;
+    background: rgb(241, 241, 241);
+    border: 1px solid rgb(189, 189, 189);
+    border-radius: 5px;
+}
+
+.top-box, .bottom-box {
+    width: 100%;
+    height: 270px;
+    padding: 10px 25px;
+    background: rgb(241, 241, 241);
+    border: 1px solid rgb(189, 189, 189);
+    border-radius: 5px;
+    overflow: auto
+}
+
+.block-edit, .block-style, .add-block {
+    display: none;
+}
+
+#code-data {
+    width: 100%;
+    border: 1px solid rgb(156, 194, 211);
+    border-radius: 4px;
+}
+
+#code-data:focus {
+    box-shadow: 0 0 1px 3px rgba(105, 191, 231, 0.548);
+    outline: none;
+}
+
+/* BUTTONS */
+
+.edit, .style, .add, .save {
+    margin: 10px 2px;
+    width: 50px;
+    height: 33px;
+    border: none;
+    border-radius: 5px;
+}
+
+/* Edit button*/
+
+.edit {
+    background: yellow;
+    position: relative;
+    left: 410px;
+}
+
+.edit:hover {
+    background: rgb(241, 241, 0);
+    transition: 0.3s;
+}
+
+.edit:focus {
+    box-shadow: 0 0 1px 3px rgba(241, 241, 0, 0.459);
+    transition: 0.1s;
+    outline: none;
+}
+
+/* Style button*/
+
+.style {
+    background: blue;
+    color: white;
+    position: relative;
+    left: 410px;
+}
+
+.style:hover {
+    background: rgb(0, 0, 235);
+    transition: 0.3s;
+}
+
+.style:focus {
+    box-shadow: 0 0 1px 3px rgba(0, 0, 235, 0.450);
+    transition: 0.1s;
+    outline: none;
+}
+
+/* Add button*/
+
+.add {
+    background: red;
+    color: white;
+}
+
+.add:hover {
+    background: rgb(226, 0, 0);
+    transition: 0.3s;
+}
+
+.add:focus {
+    box-shadow: 0 0 1px 3px rgba(226, 0, 0, 0.450);
+    transition: 0.1s;
+    outline: none;
+}
+
+
+/* Save button*/
+
+.save {
+    background: green;
+    color: white;
+}
+
+.save:hover {
+    background: rgb(0, 109, 0);
+    transition: 0.3s;
+}
+
+.save:focus {
+    box-shadow: 0 0 1px 3px rgba(0, 109, 0, 0.450);
+    transition: 0.1s;
+    outline: none;
+}
+
+/* Block style */
+
+form > select {
+    width: 280px;
+    height: 35px;
+    border-radius: 3px;
+    border: 1px solid rgb(156, 194, 211);
+}
+
+form > select:focus {
+    box-shadow: 0 0 1px 3px rgba(105, 191, 231, 0.548);
+    outline: none;
+}
+
+.text-color,
+.background {
+    padding: 10px 10px;
+    color: white;
+    background-color: rgb(76, 87, 88);
+    border-radius: 4px;
+    border-style: none;
+}
+
+.text-color:focus,
+.background:focus {
+    box-shadow: 0 0 1px 3px rgba(76, 87, 88, 0.450);
+    outline: none;
+}
+
+.color,
+.background-color {
+    width: 150px;
+    height: 150px;
+    display: none;
+    flex-wrap: wrap;
+}
+
+.color > p,
+.background-color > p {
+    position: relative;
+    left: 500px;
+    top: -220px;
+    width: 33.333%;
+    height: 33.333%;
+    margin: 0;
+}
+
+/* BLOCK ADD-TABLE */
+/* Table grid start */
+
+.table {
+    width: 100%;
+    height: 350px;
+    display: none;
+    grid-template-columns: repeat(6, auto);
+    grid-template-rows: repeat(7, auto);
+}
+
+span.count-tr {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    align-self: center;
+}
+
+span.count-td {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    align-self: center;
+}
+
+input.count-tr {
+    grid-column: 2 / span 5;
+    grid-row: 1 / 2;
+    align-self: center;
+    height: 35px;
+    border: 1px solid rgb(163, 163, 163);
+    border-radius: 5px;
+    padding-left: 10px;
+}
+
+input.count-td {
+    grid-column: 2 / span 5;
+    grid-row: 2 / 3;
+    align-self: center;
+    height: 35px;
+    border: 1px solid rgb(163, 163, 163);
+    border-radius: 5px;
+    padding-left: 10px;
+}
+
+.h3 {
+    grid-column: 1 / span 2;
+    grid-row: 3 / 4;
+    align-self: flex-end;
+
+    margin: 0;
+}
+
+span.width-td {
+    grid-column: 1 / 2;
+    grid-row: 4 / 5;
+    align-self: center;
+}
+
+input.width-td {
+    grid-column: 2 / span 5;
+    grid-row: 4 / 5;
+    align-self: center;
+    height: 35px;
+    border: 1px solid rgb(163, 163, 163);
+    border-radius: 5px;
+    padding-left: 10px;
+}
+
+span.height-td {
+    grid-column: 1 / 2;
+    grid-row: 5 / 6;
+    align-self: center;
+}
+
+input.height-td {
+    grid-column: 2 / span 5;
+    grid-row: 5 / 6;
+    align-self: center;
+    height: 35px;
+    border: 1px solid rgb(163, 163, 163);
+    border-radius: 5px;
+    padding-left: 10px;
+}
+
+span.border-width {
+    grid-column: 1 / 2;
+    grid-row: 6 / 7;
+    align-self: center;
+}
+
+input.border-width {
+    grid-column: 2 / 3;
+    grid-row: 6 / 7;
+    align-self: center;
+    height: 35px;
+    border: 1px solid rgb(163, 163, 163);
+    border-radius: 5px;
+    padding-left: 10px;
+}
+
+span.border-type {
+    grid-column: 3 / 4;
+    grid-row: 6 / 7;
+    align-self: center;
+}
+
+select.border-type {
+    grid-column: 4 / 5;
+    grid-row: 6 / 7;
+    align-self: center;
+    justify-self: center;
+    height: 35px;
+    border: 1px solid rgb(163, 163, 163);
+    border-radius: 5px;
+    padding-left: 10px;
+}
+
+span.border-color {
+    grid-column: 5 / 6;
+    grid-row: 6 / 7;
+    align-self: center;
+    justify-self: center;
+}
+
+select.border-color {
+    grid-column: 6 / 7;
+    grid-row: 6 / 7;
+    align-self: center;
+    justify-self: flex-end;
+    height: 35px;
+    border: 1px solid rgb(163, 163, 163);
+    border-radius: 5px;
+    padding-left: 10px;
+}
+
+input.count-tr:focus,
+input.count-td:focus,
+input.width-td:focus,
+input.height-td:focus,
+input.border-width:focus,
+select.border-type:focus,
+select.border-color:focus {
+    box-shadow: 0 0 1px 3px rgba(105, 191, 231, 0.548);
+    outline: none;
+}
+
+.table-btn {
+    grid-column: 1 / 2;
+    grid-row: 7 / 8;
+    align-self: center;
+
+    width: 110px;
+    height: 35px;
+    background: green;
+    color: white;
+    border-radius: 4px;
+    border-style: none;
+}
+
+.table-btn:focus {
+    box-shadow: 0 0 1px 3px rgba(0, 128, 0, 0.486);
+    outline: none;
+}
+
+/* Table grid and */
+
+
+.small {
+    width: 120px;
+}
+
+/* BLOCK ADD-LIST */
+/* List grid start*/
+
+.list {
+    display: none;
+    grid-template-columns: 17% 83%;
+    grid-template-rows: repeat(3, auto);
+    height: 140px;
+}
+
+span.count-li {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    align-self: center;
+}
+
+input.count-li {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    align-self: center;
+    height: 35px;
+    border: 1px solid rgb(163, 163, 163);
+    border-radius: 5px;
+    padding-left: 5px;
+}
+
+span.mark-type {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    align-self: center;
+}
+
+select.mark-type {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    align-self: center;
+    width: 100%;
+    height: 40px;
+    border: 1px solid rgb(163, 163, 163);
+    border-radius: 5px;
+    padding-left: 5px;
+}
+
+input.count-li:focus,
+select.mark-type:focus {
+    box-shadow: 0 0 1px 3px rgba(105, 191, 231, 0.548);
+    outline: none;
+}
+
+.list-btn {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+    align-self: center;
+
+    height: 35px;
+    width: 95px;
+    background: green;
+    color: white;
+    border-radius: 4px;
+    border-style: none;
+}
+
+.list-btn:focus {
+    box-shadow: 0 0 1px 3px rgba(0, 128, 0, 0.486);
+    outline: none;
+}
+
+/* List grid and*/
+
+/* ADDITIONAL CLASES */
+
+.flex {
+    display: flex;
+}
+
+.grid {
+    display: grid;
+}
+
+.show {
+    display: block;
+}
+
+.unshow {
+    display: none;
+}
